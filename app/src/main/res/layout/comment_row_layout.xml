@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/comment_profile_picture"
+        android:background="@drawable/circular_image"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_username"
+        android:text="Username"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/comment_text"
+        android:layout_toEndOf="@+id/comment_profile_picture"
+        android:paddingLeft="5dp" />
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_text"
+        android:text="Status Text"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/comment_upvotes"
+        android:layout_below="@+id/comment_profile_picture"
+        android:paddingLeft="5dp"
+        android:layout_alignBottom="@+id/comment_downvotes" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/comment_upvotes"
+        android:background="@drawable/upvote"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/comment_username" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/comment_downvotes"
+        android:background="@drawable/downvote"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_below="@+id/comment_upvotes"
+        android:layout_alignEnd="@+id/comment_username"
+        android:layout_marginTop="55dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/comment_votes"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/comment_upvotes"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/comment_text"
+        android:gravity="center_vertical|center_horizontal" />
+
+</RelativeLayout>

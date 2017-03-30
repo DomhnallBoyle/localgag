@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    tools:context=".Screens.Fragments.SignupFragment"
+    android:background="#6d9fdd">
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress_view_signup"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cpv_animAutostart="true"
+        app:cpv_indeterminate="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_signup"
+        android:layout_marginTop="28dp"
+        android:hint="Username"
+        android:maxLength="40"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_signup"
+        android:hint="Email-Address"
+        android:maxLength="40"
+        android:singleLine="true"
+        android:layout_below="@+id/username_signup"
+        android:layout_alignStart="@+id/username_signup" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:maxLength="40"
+        android:singleLine="true"
+        android:layout_below="@+id/email_signup"
+        android:layout_alignStart="@+id/email_signup"
+        android:id="@+id/password_signup" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_confirm_signup"
+        android:hint="Confirm Password"
+        android:maxLength="40"
+        android:singleLine="true"
+        android:layout_below="@+id/password_signup"
+        android:layout_alignStart="@+id/password_signup" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back_signup"
+        android:layout_below="@+id/password_confirm_signup"
+        android:layout_alignStart="@+id/password_confirm_signup" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/usernameTick"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/username_signup"
+        android:layout_above="@+id/email_signup"
+        android:layout_alignTop="@+id/username_signup" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/emailTick"
+        android:layout_below="@+id/username_signup"
+        android:layout_above="@+id/passwordTick"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/usernameTick" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/passwordTick"
+        android:layout_below="@+id/email_signup"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/password_confirm_signup"
+        android:layout_toEndOf="@+id/email_signup" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/password2Tick"
+        android:layout_alignBottom="@+id/password_confirm_signup"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/passwordTick"
+        android:layout_toEndOf="@+id/password_confirm_signup" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:id="@+id/signup_signup"
+        android:layout_below="@+id/password_confirm_signup"
+        android:layout_alignEnd="@+id/password_confirm_signup" />
+</RelativeLayout>

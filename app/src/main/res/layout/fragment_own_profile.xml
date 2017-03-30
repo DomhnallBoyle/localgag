@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment"
+    tools:context=".Screens.Fragments.ProfileFragment">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/profile_image"
+        android:layout_gravity="left|top"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/profile_face"
+        android:background="@drawable/outlines"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/profile_name"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/profile_image"
+        android:layout_alignStart="@+id/profile_posts"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="25dp"
+        android:text="John Doe"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/profile_posts"
+        android:layout_gravity="left|top"
+        android:drawableLeft="@drawable/wall"
+        android:text="0"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/profile_name"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/profile_username" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/profile_points"
+        android:layout_gravity="left|top"
+        android:drawableLeft="@drawable/points"
+        android:text="0"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/profile_name"
+        android:layout_toEndOf="@+id/profile_posts"
+        android:layout_above="@+id/profile_gender" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/profile_bio"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/profile_username"
+        android:layout_alignStart="@+id/profile_username"
+        android:layout_alignEnd="@+id/profile_description"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="This is a short bio!"
+        android:textSize="15dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="225dp"
+        android:id="@+id/profile_description"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/profile_bio"
+        android:layout_alignStart="@+id/profile_username"
+        android:text="This is a description!"
+        android:textSize="20dp"
+        android:singleLine="false"
+        android:editable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:id="@+id/profile_edit"
+        android:layout_below="@+id/profile_description"
+        android:layout_toStartOf="@+id/profile_posts" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/profile_username"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/profile_image"
+        android:layout_alignStart="@+id/profile_image"
+        android:singleLine="true"
+        android:text="Username: JohnDoe"
+        android:textSize="15dp"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/profile_gender"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/profile_username"
+        android:layout_alignEnd="@+id/profile_description"
+        android:layout_toEndOf="@+id/profile_username"
+        android:textSize="15dp"
+        android:text="Gender: Female"
+        android:singleLine="true"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/profile_save"
+        android:layout_below="@+id/profile_description"
+        android:layout_alignEnd="@+id/profile_points" />
+
+</RelativeLayout>
